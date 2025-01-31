@@ -1,0 +1,102 @@
+{% load static %}
+{% load i18n %} 
+
+<section class="services-one" id="about">
+  <div class="container">
+      <div class="section-title text-center">
+          <h2 class="section-title__title wow fadeInUp" data-wow-delay="300ms">{% translate "Artnova tashkiloti haqida  " %}</h2>
+          <span class="section-title__tagline mt-3 wow fadeInUp" data-wow-delay="300ms">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% if LANGUAGE_CODE == 'ru' %}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius, metus sit amet suscipit rutrum, mi ligula lacinia urna, in tristique purus magna vel purus. Fusce tincidunt ipsum ac ipsum convallis pellentesque. Ut ac luctus dui. Maecenas volutpat laoreet porttitor. In tincidunt finibus neque, at euismod sem accumsan a. Praesent vulputate magna at consectetur semper. Fusce vel nisi in tellus sagittis ultricies eu eget nisl. Ut ultrices orci eu tellus auctor, in interdum felis viverra. Sed iaculis consectetur nulla id blandit.
+
+Phasellus leo tortor, sagittis in vestibulum ut, imperdiet et augue. Nunc tincidunt velit sed est pellentesque tristique. Mauris suscipit velit at nibh lobortis, et convallis arcu ullamcorper. Pellentesque vitae nibh imperdiet, congue ipsum et, lacinia diam. Vestibulum suscipit urna ut velit maximus, at bibendum augue mattis. Nam suscipit arcu odio, quis volutpat tortor consequat sed. Aliquam interdum sit amet lorem ut vestibulum. Proin ut tortor gravida, sollicitudin risus nec, venenatis eros.
+
+In et mi vel neque suscipit sodales. Morbi tincidunt augue magna, in tempor turpis venenatis sit amet. Sed consectetur placerat nisi. Aenean et odio non est convallis interdum vitae ac nisl. Nullam malesuada congue odio. Fusce facilisis purus et egestas maximus. Donec pretium porttitor lacus in dignissim.
+
+Aliquam vel lorem orci. Praesent mollis dui lectus, in gravida lectus tincidunt ac. Ut vitae aliquet lorem. Sed quis quam nec felis viverra finibus. Ut fringilla dui et lorem mattis, sit amet elementum tellus laoreet. Donec urna libero, commodo at velit luctus, semper ultrices justo. Aliquam erat volutpat.
+
+Cras accumsan mauris sed odio cursus molestie. Nunc vel dolor quis tortor luctus rutrum et ut turpis. Donec eu sem odio. Nulla rutrum feugiat massa vitae lacinia. Cras aliquet eu turpis at volutpat. Phasellus pulvinar sem nec nibh scelerisque, nec ultrices augue dignissim. Cras sit amet dignissim neque. Phasellus eget nisl lacinia, scelerisque metus et, rutrum ligula. Pellentesque pellentesque, neque et tincidunt ultrices, nisl neque dapibus odio, et rhoncus lorem magna ac tortor. Nullam efficitur vel erat sed congue. Suspendisse in erat ligula. Duis odio nulla, mollis eget massa nec, mollis convallis diam.
+              {% elif LANGUAGE_CODE == 'en' %}
+              IE LLC «VIGONVITA TASHKENT» is a subsidiary of Vigonvita Life Sciences Co., Ltd, founded in January 2013 under the leadership of the Suzhou Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company focuses on addressing new clinical needs and specializes in developing drugs for neuropsychiatric conditions, infectious diseases, and andrological treatments.<br><br>
+              Vigonvita is home to a team of researchers and developers led by Professor Shen Jinshan, an expert under the State Council's Special Allowance Program and a professor at the Shanghai Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company has established research and development centers in Suzhou, Shanghai, and Nantong, employing over 200 staff members, including 16 Ph.D. holders, with 46% of the team being master's or doctoral graduates.<br><br>
+              Vigonvita has a comprehensive system for innovative drug research and development, encompassing functional platforms or divisions for drug discovery, drug suitability evaluation, preclinical studies, clinical trials, and drug manufacturing. These platforms facilitate the rapid transformation and commercialization of promising compounds and technologies from the laboratory to clinical use, and ultimately to full-scale production.<br><br>
+              In collaboration with the Suzhou Institute of Pharmaceutical Sciences, Vigonvita Life Sciences Co., Ltd co-founded Wangshan Wangshui (Lianyungang) Pharmaceutical Co., Ltd, which serves as a manufacturing site for the company's innovative drugs. This facility has an annual production capacity of 450 million capsules (or 1.6 billion tablets), with an auxiliary API production workshop set to become operational soon. Additionally, a multifunctional modular production platform is under construction for emergency use.
+              {% else %}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius, metus sit amet suscipit rutrum, mi ligula lacinia urna, in tristique purus magna vel purus. Fusce tincidunt ipsum ac ipsum convallis pellentesque. Ut ac luctus dui. Maecenas volutpat laoreet porttitor. In tincidunt finibus neque, at euismod sem accumsan a. Praesent vulputate magna at consectetur semper. Fusce vel nisi in tellus sagittis ultricies eu eget nisl. Ut ultrices orci eu tellus auctor, in interdum felis viverra. Sed iaculis consectetur nulla id blandit.
+
+Phasellus leo tortor, sagittis in vestibulum ut, imperdiet et augue. Nunc tincidunt velit sed est pellentesque tristique. Mauris suscipit velit at nibh lobortis, et convallis arcu ullamcorper. Pellentesque vitae nibh imperdiet, congue ipsum et, lacinia diam. Vestibulum suscipit urna ut velit maximus, at bibendum augue mattis. Nam suscipit arcu odio, quis volutpat tortor consequat sed. Aliquam interdum sit amet lorem ut vestibulum. Proin ut tortor gravida, sollicitudin risus nec, venenatis eros.
+
+In et mi vel neque suscipit sodales. Morbi tincidunt augue magna, in tempor turpis venenatis sit amet. Sed consectetur placerat nisi. Aenean et odio non est convallis interdum vitae ac nisl. Nullam malesuada congue odio. Fusce facilisis purus et egestas maximus. Donec pretium porttitor lacus in dignissim.
+
+Aliquam vel lorem orci. Praesent mollis dui lectus, in gravida lectus tincidunt ac. Ut vitae aliquet lorem. Sed quis quam nec felis viverra finibus. Ut fringilla dui et lorem mattis, sit amet elementum tellus laoreet. Donec urna libero, commodo at velit luctus, semper ultrices justo. Aliquam erat volutpat.
+
+Cras accumsan mauris sed odio cursus molestie. Nunc vel dolor quis tortor luctus rutrum et ut turpis. Donec eu sem odio. Nulla rutrum feugiat massa vitae lacinia. Cras aliquet eu turpis at volutpat. Phasellus pulvinar sem nec nibh scelerisque, nec ultrices augue dignissim. Cras sit amet dignissim neque. Phasellus eget nisl lacinia, scelerisque metus et, rutrum ligula. Pellentesque pellentesque, neque et tincidunt ultrices, nisl neque dapibus odio, et rhoncus lorem magna ac tortor. Nullam efficitur vel erat sed congue. Suspendisse in erat ligula. Duis odio nulla, mollis eget massa nec, mollis convallis diam.
+              {% endif %}
+              
+          </span>
+      </div>
+
+      {% comment %} <div class="section-title text-center mb-4">
+          <h2 class="section-title__title wow fadeInLeft" data-wow-delay="300ms" style="font-size: 40px">{% translate "Bizning Markazlar (Xitoy)" %}</h2>
+      </div>
+
+      <div class="row">
+          <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/suzhou.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Bosh ofis va Tadqiqot markazi" %}</a></h3>
+                      <p class="services-one__text">Suzhou</p>
+                      <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/shanghai.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Tadqiqot markazi" %}</a></h3>
+                      <p class="services-one__text">Shanghai</p>
+                      <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/nantong.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Dori ishlab chiqarish zavodi" %}</a></h3>
+                      <p class="services-one__text">Nantong</p>
+                      <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/lianyungang.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="{% url "lianyungang" %}">{% translate "Dori ishlab chiqarish zavodi" %}</a></h3>
+                      <p class="services-one__text">Lianyungang</p>
+                      <a href="{% url "lianyungang" %}" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+      </div> {% endcomment %}
+  </div>
+</section>

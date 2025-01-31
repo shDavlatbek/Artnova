@@ -1,0 +1,87 @@
+{% load static i18n %}
+
+{% url "home" as home_url %}
+<!--Site Footer One Start-->
+<footer class="site-footer">
+    <div class="site-footer-shape wow slideInRight" data-wow-delay="100ms" data-wow-duration="3500ms" style="background-image: url({% static 'assets/images/shapes/footer-shape.png' %})"></div>
+    <div class="container">
+        <div class="site-footer__top">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="footer-widget__column footer-widget__about">
+                        <div class="footer-widget__about-logo">
+                            <a href="javascript:void(0)"><img src="{% static 'assets/images/footer-logo.png' %}" alt="" style="
+                                filter: drop-shadow(0 10px 10px white)
+                                        drop-shadow(0 -10px 10px white)
+                                        drop-shadow(10px 0 10px white)
+                                        drop-shadow(-10px 0 10px white);"/></a>
+                        </div>
+                        <!-- <p class="footer-widget__text">Welcome to our consultancy agency. Lore ipsum simply text amet cing elit.</p> -->
+                        <ul class="list-unstyled footer-widget__contact-list">
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-phone-square-alt"></i>
+                                </div>
+                                <div class="text">
+                                    <p><a href="tel:+998-99-329-6711">+998 99 329 6711</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="text">
+                                    <p><a href="mailto:example@site.com">example@site.com</a>, <a href="mailto:example@site.com">example@site.com</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="text">
+                                    <p>{% translate "Toshkent shahri, Yunusobod tumani, Axilobod MFY, 13 mavzesi, 45 uy" %}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="footer-widget__column footer-widget__explore clearfix">
+                        <h3 class="footer-widget__title">Ma'lumotlar</h3>
+                        <ul class="footer-widget__explore-list list-unstyled">
+                            {% include "components/header_link.html" %}
+                        </ul>
+                    </div>
+                </div>
+                {% comment %} <div class="col-xl-5 col-lg-6 col-md-8 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="footer-widget__column footer-widget__newsletter">
+                        <h3 class="footer-widget__title footer-widget__title-news">Newsletter</h3>
+                        <form class="footer-widget__newsletter-form">
+                            <p class="footer-widget__newsletter-text">Subsrcibe for latest articles and resources</p>
+                            <div class="footer-widget__newsletter-input-box">
+                                <input type="email" placeholder="Email address" name="email" />
+                                <button type="submit" class="footer-widget__newsletter-btn">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site-footer-bottom__inner">
+                        <div class="site-footer-bottom__left">
+                            {% load tz %}
+                            <p>©️ {% now "Y" %} {% translate "Artnova tashkiloti" %} </p>
+                        </div>
+                        <div class="site-footer__social ms-5">
+                            {% include "components/soc_media_links.html" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Site Footer One End-->

@@ -1,0 +1,14 @@
+{% extends "depends.html" %}
+
+{% block body %}
+<div class="page-wrapper">
+    {% include "components/header.html" %}
+
+    {% block content %}{% endblock content %}
+
+    {% include "components/footer.html" %}
+    
+</div>
+<!-- /.page-wrapper -->
+
+{% endblock body %}

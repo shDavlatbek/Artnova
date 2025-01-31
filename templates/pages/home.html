@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %} 
+
+{% block title %}{% translate "Bosh sahifa" %} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
+
+{% block description %}{% translate "«VIGONVITA TOSHKENT» rasmiy web-sayti. Innovatsion, biofarmatsevtik kompaniya. Bizning preparatlarimiz: Onvita, Longvita" %}{% endblock description %}
+
+{% block content %}
+
+{% include "sections/main-slider.html" %}
+{% include "sections/about.html" %}
+{% include "sections/team.html" %}
+{% include "sections/certificates-patents.html" %}
+<!-- {% include "sections/medicine.html" %} -->
+{% include "sections/services.html" %}
+
+
+<section class="cta-one wow zoomIn" data-wow-delay="100ms">
+    <div class="cta-one-bg" style="background-image: url({% static 'assets/images/backgrounds/cta-one-bg.png' %})"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="cta-one__inner">
+                    <div class="cta-one__left">
+                        <h2 class="cta-one__title">
+                            {% translate "Savolingiz bormi?" %}
+                        </h2>
+                    </div>
+                    <div class="cta-one__right">
+                        <a href="#contact" class="thm-btn cta-one__btn">{% translate "Biz bilan bog'lanish" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "sections/events.html" %}
+{% include "sections/slider.html" %}
+{% include "sections/news.html" %}
+{% include "sections/partners.html" %}
+<!-- {% include "sections/media.html" %} -->
+{% include "sections/gallary.html" %}
+{% include "sections/comments.html" %}
+{% include "sections/contact.html" %}
+
+{% endblock content %}

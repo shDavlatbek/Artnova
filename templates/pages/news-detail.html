@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %} 
+{% load l10n %} 
+{% load custom_tags %}
+
+{% block title %}{{ news.title }} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="page-header__bg" style='background-image: url({% static 'assets/images/backgrounds/mountains.png' %});'></div><!-- /.page-header__bg -->
+    <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+    <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+    <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="{% url "home" %}">{% translate "Bosh sahifa" %}</a></li>
+                <li><span>/</span></li>
+                <li><a href="{% url "news-all" %}">{% translate "Yangiliklar" %}</a></li>
+            </ul>
+            <h2>{{ news.title }}</h2>
+        </div>
+    </div>
+</section>
+
+
+<section class="news-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7">
+                <div class="news-details__left">
+                    <div class="news-details__img">
+                        <img src="{{ news.image.url }}" alt="{{ news.slug }}">
+                        <div class="news-details__date-box">
+                            <p>
+                                {% localize on %}
+                                    {{ news.created_at|date:"j M" }}
+                                {% endlocalize %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-details__content">
+                        <ul class="list-unstyled news-details__meta">
+                            <li><a href="{{ news.get_absolute_url }}"><i class="far fa-eye"></i> {{ news.views }} {% translate "Ko'rishlar" %}</a></li>
+                        </ul>
+                        <h3 class="news-details__title">{{ news.title }}</h3>
+                        <p class="news-details__text-one">{{ news.content }}</p>
+                    </div>
+                    <div class="news-details__bottom">
+                        <p class="news-details__tags">
+                        </p>
+                        <div class="news-details__social-list">
+                            {% include "components/soc_media_links.html" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="sidebar">
+                    <div class="sidebar__single sidebar__post">
+                        <h3 class="sidebar__title">{% translate "Ohirgi yangiliklar" %}</h3>
+                        <ul class="sidebar__post-list list-unstyled">
+                            {% for single in latest_news %}
+                            <li>
+                                <div class="sidebar__post-image">
+                                    <img src="{{ single.image.url }}" alt="{{ single.slug }}">
+                                </div>
+                                <div class="sidebar__post-content">
+                                    <h3>
+                                        <a href="{{ single.get_absolute_url }}" class="sidebar__post-content_meta"><i class="far fa-eye"></i> {{ single.views }} {% translate "Ko'rishlar" %}</a>
+                                        <a href="{{ single.get_absolute_url }}">{{ single.title|short_description:25 }}</a>
+                                    </h3>
+                                </div>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

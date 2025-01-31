@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% translate "Bosh sahifa" %} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
+
+{% block description %}{% translate "«VIGONVITA TOSHKENT» rasmiy web-sayti. Innovatsion, biofarmatsevtik kompaniya.
+Bizning preparatlarimiz: Onvita, Longvita" %}{% endblock description %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="page-header__bg" style='background-image: url({% static 'assets/images/backgrounds/mountains.png' %});'>
+  </div><!-- /.page-header__bg -->
+  <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+  <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+  <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+  <div class="container">
+    <div class="page-header__inner">
+      <ul class="thm-breadcrumb list-unstyled">
+        <li><a href="{% url "home" %}">{% translate "Bosh sahifa" %}</a></li>
+        <li><span>/</span></li>
+        <li>{% translate "Lianyungang" %}</li>
+      </ul>
+      <h2>{% translate "Lianyungang" %}</h2>
+    </div>
+  </div>
+</section>
+
+<section class="services-one" id="about">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2 class="section-title__title wow fadeInUp" data-wow-delay="300ms">Lianyungang - {% translate "Dori ishlab chiqarish zavodi" %}
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture1.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture2.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture3.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture4.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture5.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img src="{% static 'assets/images/lianyungang/Picture6.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title text-center">
+      
+      <span class="section-title__tagline mt-3 wow fadeInUp" data-wow-delay="300ms">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == 'ru' %}
+        Дочерняя фармацевтическая производственная компания Vigonvita (Lianyungang) Pharmaceutical Co., Ltd расположена в национальной зоне развития Ляньюньган и занимает площадь в 15 гектаров. Она имеет систему производства сырья и препаратов, которая соответствует внутренним и международным стандартам GMP и требованиям EHS (экология, здоровье и безопасность). В компании работает более 280 сотрудников, из которых 45% занимаются исследованиями и разработкой, имеют степени магистра и доктора.
+        {% elif LANGUAGE_CODE == 'en' %}
+        The subsidiary pharmaceutical manufacturing company Vigonvita (Lianyungang) Pharmaceutical Co., Ltd is located in the national development zone of Lianyungang and occupies an area of 15 hectares. It has a production system for raw materials and preparations that meets both domestic and international GMP standards as well as EHS (Environment, Health, and Safety) requirements. The company employs over 280 staff, 45% of whom are engaged in research and development and hold master's or doctoral degrees.
+        {% else %}
+        Vigonvita (Lianyungang) Pharmaceutical Co., Ltd sho'ba farmatsevtika kompaniyasi Lianyungang milliy rivojlanish zonasida joylashgan va 15 gektar maydonni egallaydi. U mahalliy va xalqaro GMP standartlari hamda EHS (Atrof-muhit, salomatlik va xavfsizlik) talablariga javob beradigan xom ashyo va preparatlar ishlab chiqarish tizimiga ega. Kompaniyada 280 dan ortiq xodimlar ishlaydi, ularning 45% tadqiqot va ishlanmalar bilan shug'ullanadi va magistr yoki doktorlik darajasiga ega.
+        {% endif %}
+      </span>
+    </div>
+
+    <div class="row">
+      <div class="col-12 wow fadeInLeft" data-wow-delay="300ms">
+        <!--Services One Single-->
+        <div class="services-one__single">
+          <div class="services-one__img">
+            <img id='construction-image' src="{% static 'assets/images/lianyungang/construction.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  #construction-image{
+    height: 100%;
+  }
+</style>
+
+{% endblock content %}

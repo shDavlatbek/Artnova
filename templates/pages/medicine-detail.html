@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %} 
+{% load l10n %} 
+{% load translated_field %}
+
+{% block title %}{{ medicine|translated_field:"name" }} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'assets/css/ckeditor5.css' %}">
+
+<section class="page-header">
+    <div class="page-header__bg" style='background-image: url({% static 'assets/images/backgrounds/mountains.png' %});'></div><!-- /.page-header__bg -->
+    <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+    <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+    <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="{% url "home" %}">{% translate "Bosh sahifa" %}</a></li>
+                <li><span>/</span></li>
+                <li><a href="javascript:void(0)">{% translate "Dorilar" %}</a></li>
+            </ul>
+            <h2>{{ medicine|translated_field:"name" }}</h2>
+        </div>
+    </div>
+</section>
+
+<section class="product-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product-details__image">
+                    <img src="{{ medicine.image.url }}" alt="{{ medicine.image.name }}">
+                </div><!-- /.product-details__image -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="product-details__content">
+                    <div class="product-details__content__top">
+                        <h3 class="product-details__content__name">{{ medicine|translated_field:"name" }}</h3>
+                        <!-- /.product-details__content__name -->
+                        <!-- <div class="product-details__content__price">$23.00</div> -->
+                        <!-- /.product-details__content__price -->
+                    </div><!-- /.product-details__content__top -->
+                    <!-- <div class="product-details__content__rating">
+                        <div class="product-details__content__rating__star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product-details__content__rating__count">2 Customer Reviews</div>
+                    </div> -->
+                    <div class="product-details__content__text">
+                        <div class="ck-content">
+                            {{ medicine|translated_field:"description_sm"|safe }}
+                        </div>
+                        {% comment %} <p>Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo
+                            venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque
+                            neque.</p>
+                        <p>REF. 4231/406 <br>Available in store</p> {% endcomment %}
+                    </div><!-- /.product-details__content__text -->
+                    {% comment %} <div class="product-details__content__quantity">
+                        <div class="product-details__content__quantity__text">quantity</div>
+                        <!-- /.product-details__content__quantity__text -->
+                        <div class="quantity-box">
+                            <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+                            <input type="number" id="product-1" value="1" />
+                            <button type="button" class="add"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div><!-- /.product-details__content__quantity --> {% endcomment %}
+
+                    {% comment %} <div class="product-details__content__buttons">
+                        <a href="cart.html" class="thm-btn cart-btn">Add to cart</a><!-- /.thm-btn -->
+                        <a href="javascript:void(0)" class="thm-btn wishlist-btn">add to wishlist</a>
+                        <!-- /.thm-btn wishlist-btn -->
+                    </div><!-- /.product-details__content__buttons --> {% endcomment %}
+                    {% comment %} <div class="product-details__content__social">
+                        <div class="product-details__content__social__text">Share with friends</div>
+                        <!-- /.product-details__content__social__text -->
+                        <a href="javascript:void(0)" class="fab fa-facebook"></a>
+                        <a href="javascript:void(0)" class="fab fa-twitter"></a>
+                        <a href="javascript:void(0)" class="fab fa-instagram"></a>
+                        <a href="javascript:void(0)" class="fab fa-pinterest-p"></a>
+                    </div><!-- /.product-details__content__social --> {% endcomment %}
+                </div><!-- /.product-details__content -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.product-details -->
+
+<section class="product-content">
+    <div class="container pb-5">
+        <h2 class="product-content__title">Description</h2><!-- /.product-content__title -->
+        <div class="ck-content">
+            {{ medicine|translated_field:"description"|safe }}
+        </div>
+        </p>
+    </div><!-- /.container -->
+</section><!-- /.product-content -->
+
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %} 
+{% load translated_field %}
+{% load custom_tags %}
+
+<section class="our-mission" id="medicine">
+  <div class="our-mission-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url({% static 'assets/images/backgrounds/mountains.png' %})"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12">
+              <div class="our-mission__inner">
+                  <h2 class="our-mission__title mb-0 wow fadeInRight">
+                      {% translate "Bizning Dorilar" %} <br />
+                  </h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="financial-advice">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 wow fadeInUp">
+              <div class="financial-advice__box tabs-box">
+                  <div class="tabs-content pt-5">
+                      <div class="tab active-tab">
+                          <div class="financial-advice__content">
+                            <div class="row">
+                                {% for single in medicine %}
+                                <div class="col-xl-6 col-lg-6 wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
+                                    <div class="services-one__single">
+                                        <div class="services-one__img">
+                                            <img src="{{ single.image.url }}" alt="{{ single.image.name }}">
+                                        </div>
+                                        <div class="services-one__content">
+                                            <h3 class="services-one__title"><a href="{{ single.get_absolute_url }}">{{ single|translated_field:"name" }}</a></h3>
+                                            <p class="services-one__text">{{ single|translated_field:"description_sm"|striptags|replace_char|short_description:100 }}</p>
+                                            <a href="{{ single.get_absolute_url }}" class="services-one__btn">{% translate "Batafsil" %}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

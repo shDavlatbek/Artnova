@@ -1,0 +1,253 @@
+.main-menu-select__language {
+  border: none;
+  outline: none;
+  border: none;
+  outline: none;
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  max-width: 340px;
+  /* height: 70px; */
+  padding: 0 25px 0 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background-color: var(--thm-primary);
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="rgb(34, 36, 41)" d="M540.1 776.847l472.32-473.63c15.466-15.518 15.44-40.642-0.080-56.134-15.518-15.48-40.656-15.44-56.134 0.080l-444.208 445.438-444.206-445.454c-15.48-15.518-40.602-15.558-56.122-0.080-7.78 7.766-11.67 17.94-11.67 28.114 0 10.148 3.864 20.282 11.59 28.034l472.308 473.632c7.436 7.474 17.556 11.668 28.1 11.668s20.652-4.206 28.102-11.668z"></path></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: .65em auto;
+  /* margin-top: 20px; */
+}
+.main-menu-select__language option {
+  color: black;
+  background-color: white;
+
+}
+/* @media (min-width: 768px) {
+  .shop-one__product-sorter {
+      margin-top: 0;
+  }
+} */
+
+@media only screen and (min-width: 1px) and (max-width: 1199px) {
+  #onvita-3d{
+      background-position: 70%;
+  }
+
+
+
+}
+
+.certificates .shop-one__title{
+  color: #fff;
+}
+
+.certificates .shop-one__image img{
+  height: 255px;
+  object-fit: cover;
+}
+
+.certificates .shop-one__image img:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.brand-one .swiper-slide {
+  flex-direction: column;
+}
+
+.brand-one .swiper-slide img {
+  opacity: 1;
+}
+
+.brand-one .swiper-slide img:hover {
+  opacity: 0.7;
+}
+
+.financial-advice__box .tab-btns .tab-btn {
+  max-width: 585px;
+}
+
+.financial-advice__img{
+  background-color: transparent;
+}
+.financial-advice__img>img{
+  mix-blend-mode: normal;
+}
+.our-mission-bg.jarallax div div {
+  -webkit-filter: grayscale(0%);
+  /* filter: grayscale(100%); */
+}
+.news-one__img>a>span::before {
+  width: 0;
+}
+.news-one__img>a>span::after {
+  width: 0;
+}
+.news-one .thm-btn:hover {
+  background-color: var(--thm-black);
+  color: var(--thm-base);
+}
+.main-slider__content-span{
+  font-size: 70px;
+}
+.services-one:before {
+  height: 100%;
+}
+.services-one__img>img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  mix-blend-mode: luminosity;
+  transition: all 500ms ease;
+  transform: scale(1);
+}
+.site-footer-bottom__inner {
+  justify-content: center;
+}
+.main-menu-wrapper__logo {
+  padding: 23.5px 60px 23.5px 0;
+}
+.main-menu-wrapper__search{
+  padding: 40.5px 60px 40.5px;
+}
+.coming-soon{
+  background-blend-mode: luminosity;
+}
+.coming-soon h1{
+  color: white;
+  font-weight: 600;
+  background-color: rgba(0,0,0, 0.5);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-transform: uppercase;
+}
+
+.site-footer__top{
+  padding: 50px 0 50px;
+}
+
+.main-menu .main-menu__list>li+li,
+.stricky-header .main-menu__list>li+li {
+  margin-left: 34px;
+}
+
+.page-header__bg {
+  background-color: transparent;
+  background-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.main-slider h2 {
+  font-size: 120px;
+  line-height: 75px;
+}
+
+.main-slider .container {
+  padding-top: 356px;
+}
+
+.main-slider .swiper-slide .container {
+  height: 100vh;
+}
+
+.financial-advice__single-2 {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.financial-advice__single-2:before {
+  content: none;
+}
+
+.financial-advice__single-3 {
+  margin-left: 0;
+}
+
+.financial-advice__img{
+  display: flex;
+}
+
+.financial-advice__img>img{
+  width: 467px;
+  margin: 0 auto;
+}
+
+.product-details__content__text p+p {
+  margin-top: 5px;
+}
+
+.product-content p+p {
+  margin-top: 5px;
+}
+
+.shop-one__cart {
+  opacity: 1;
+  visibility: visible;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0px #000;
+}
+
+.shop-one__item{
+  opacity: 0.9;
+}
+
+.cta-one {
+  background-color: rgb(var(--thm-primary-rgb));
+}
+
+.cta-one-bg {
+  background-color: rgb(var(--thm-primary-rgb));
+}
+
+.cases-one__content:before {
+  background-color: rgb(var(--thm-primary-rgb));
+}
+
+.locations__single:hover {
+  background-color: rgb(var(--thm-primary-rgb));
+}
+
+.events-one {
+  padding: 100px 0;
+}
+
+.news-one__img {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.news-one__img>img {
+  mix-blend-mode: overlay;
+}
+
+.testimonials-one__carousel.owl-theme .owl-nav {
+  bottom: 24px;
+}
+
+.contact-expert__input select {
+  appearance: none; /* Removes default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    width: 100%;
+    height: 70px;
+    padding-left: 30px;
+    padding-right: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--thm-gray);
+    border: none;
+    outline: none;
+    display: block;
+    margin-bottom: 10px;
+    background-color: var(--thm-base);
+    box-shadow: 0px 0px 30px 0px rgb(0, 0, 0, .05);
+    
+}

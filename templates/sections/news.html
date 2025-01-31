@@ -1,0 +1,23 @@
+{% load static %}
+{% load i18n %} 
+
+<section class="news-one" id="news">
+  <div class="container">
+      <div class="section-title text-center wow fadeInUp" data-wow-delay="200ms">
+          <h2 class="section-title__title">{% translate "Yangiliklar" %}</h2>
+          <span class="section-title__tagline">{% translate "Biz nima qilayotganimizni ko'ring" %}</span>
+      </div>
+      <div class="row">
+          {% for single in news %}
+              {% include "components/news_single.html" with news=single %}
+          {% endfor %}
+      </div>
+      {% if news|length > 4 %}
+      <div class="w-100 text-center mt-5 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <a href="{% url 'news-all' %}" class="thm-btn mx-auto">
+              {% translate "Barchasi" %}
+          </a>
+      </div>
+      {% endif %}
+  </div>
+</section>

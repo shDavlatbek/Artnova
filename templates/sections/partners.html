@@ -1,0 +1,92 @@
+{% load static %}
+{% load i18n %}
+
+<section class="real-world">
+    <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
+        style="background-image: url({% static 'assets/images/shapes/real-world-shape.png' %})"></div>
+    <div class="container">
+        <div class="section-title text-center wow fadeInDown" data-wow-delay="200ms">
+            <h2 class="section-title__title">Hamkorlarimiz</h2>
+        </div>
+
+        <div class="thm-swiper__slider swiper-container wow fadeInDown" data-wow-delay="200ms" data-swiper-options='
+  {"spaceBetween": 100, 
+  "slidesPerView": 5, 
+  "autoplay": { "delay": 5000 }, 
+  "pagination": {
+  "type": "bullets",
+  "clickable": true
+  },
+  "breakpoints": {
+      "0": {
+          "spaceBetween": 30,
+          "slidesPerView": 2
+      },
+      "375": {
+          "spaceBetween": 30,
+          "slidesPerView": 2
+      },
+      "575": {
+          "spaceBetween": 30,
+          "slidesPerView": 2
+      },
+      "767": {
+          "spaceBetween": 50,
+          "slidesPerView": 2
+      },
+      "991": {
+          "spaceBetween": 50,
+          "slidesPerView": 3
+      },
+      "1199": {
+          "spaceBetween": 50,
+          "slidesPerView": 4
+      }
+  }}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/400x300" width="270"/>
+                    <div class="title col-12 d-inline-block text-truncate">Gazelle Enterprises in Southern Jiangsu
+                        National Innovation Demonstration Zone</div>
+                </div>
+                <!-- /.swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/400x300" width="270"/>
+                    <div class="title col-12 d-inline-block text-truncate">Jiangsu Science and Technology-based Small
+                        and Medium-sized Enterprises</div>
+                </div>
+                <!-- /.swiper-slide -->
+
+                <!-- <div
+                  class="swiper-slide"
+                  data-fancybox="gallery"
+                  data-caption="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                  data-src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
+              >
+                  <img
+                      src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
+                      alt="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                      title="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                  />
+                  <div class="title col-12 d-inline-block text-truncate">Jinji Lake Double Hundred Talent Program for Science and Technology Leaders</div>
+              </div> -->
+                <!-- /.swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/400x300" width="270"/>
+                    <div class="title col-12 d-inline-block text-truncate">Listed nursery company in Suzhou Industrial
+                        Park</div>
+                </div>
+                <!-- /.swiper-slide -->
+
+
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/400x300" width="270"/>
+                    <div class="title col-12 d-inline-block text-truncate">National High-tech Enterprise</div>
+                </div>
+                <!-- /.swiper-slide -->
+            </div>
+        </div>
+    </div>
+</section>

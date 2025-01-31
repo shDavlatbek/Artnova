@@ -1,0 +1,25 @@
+services:
+  # db:
+  #   image: postgres:16
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #     - ./data/data.sql:/docker-entrypoint-initdb.d/data.sql
+  #   env_file:
+  #     - .env
+  #   restart: always
+
+  web:
+    build: .
+    # command: gunicorn config.wsgi:application --bind 0.0.0.0:8200
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8200"
+    volumes:
+      - .:/app
+    ports:
+      - "8200:8200"
+    # depends_on:
+    #   - db
+    restart: always
+
+volumes:
+  web:
