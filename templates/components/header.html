@@ -44,11 +44,9 @@
                 </div>
                 <div class="main-menu-wrapper__phone-contact">
                     <p>{% translate "Biz bilan bog'lanish" %}</p>
-                    <a href="tel:+998-99-329-6711">+998 99 329 6711</a>
+                    <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
                 </div>
             </div>
-
-           
         </div>
     </nav>
 </header>
@@ -77,15 +75,11 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <i class="fa fa-envelope"></i>
-                <a href="mailto:ju.zhou@vigonvita.cn">ju.zhou@vigonvita.cn</a>
-            </li>
-            <li>
-                <i class="fa fa-envelope"></i>
-                <a href="mailto:irisbayev.m@gmail.com">irisbayev.m@gmail.com</a>
+                <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
             </li>
             <li>
                 <i class="fa fa-phone-alt"></i>
-                <a href="tel:+998-99-329-6711">99 329 6711</a>
+                <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
             </li>
             <li>
                 {% include "components/lang_select.html" %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %} 
+
+{% block title %}{% translate "Xizmatlar" %} || ARTNOVA || {{ service.title }}{% endblock title %}
+
+{% block description %}
+
+{% translate "«Artnova» tashkiloti rasmiy web-sahifasi. Xalqaro onlayn tanlovlar platformasi" %}
+{{ service.description }}
+
+{% endblock description %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="page-header__bg" style='background-image: url({% static 'assets/images/backgrounds/mountains.png' %});'>
+  </div><!-- /.page-header__bg -->
+  <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+  <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+  <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+  <div class="container">
+    <div class="page-header__inner">
+      <ul class="thm-breadcrumb list-unstyled">
+        <li><a href="{% url "home" %}">{% translate "Bosh sahifa" %}</a></li>
+        <li><span>/</span></li>
+        <li>{% translate "Xizmatlar" %}</li>
+      </ul>
+      <h2>{% translate "Xizmatlar" %}</h2>
+    </div>
+
+  </div>
+</section>
+
+<section class="services-details">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-8 col-lg-7">
+              <div class="services-details__left">
+                <div class="services-details__img">
+                  <img src="{{ service.image.url }}" alt="">
+                </div>
+                <div class="services-details__top-content">
+                  <h2 class="services-details__top-title">{{ service.title }}</h2>
+                </div>
+                {{ service.content|safe }}
+              </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-5">
+              <div class="services-details__sidebar">
+                  <div class="services-details__services-list-box">
+                      <h3 class="services-detials__categories">{% translate "Xizmatlar" %}</h3>
+                      <ul class="services-details__services-list list-unstyled">
+                          {% for one_service in services %}
+                          <li class="{% if service.id == one_service.id %}active{% endif %}"><a href="{{ one_service.get_absolute_url }}">{{ one_service.title }} <span class="icon-right-arrow"></span></a></li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+                  <div class="services-details__help-box">
+                      <div class="services-details__help-box-bg" style="background-image: url(assets/images/services/services-details-need-help-bg.jpg)">
+                      </div>
+                      <div class="services-details__help-box-bg-overly"></div>
+                      <h3 class="services-details__help-box-title">{% translate "Yordam kerakmi?" %}</h3>
+                      <p class="services-details__help-box-text">{% translate "Bizning xizmatlarimizdan foydalanishini istasangiz, biz bilan bog'laning" %}
+                      </p>
+                      <a href="tel:{{ settings.phone }}" class="services-details__phone">{{ settings.phone }}</a>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+
+{% endblock scripts %}

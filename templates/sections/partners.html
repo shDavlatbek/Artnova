@@ -44,48 +44,12 @@
       }
   }}'>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://placehold.co/400x300" width="270"/>
-                    <div class="title col-12 d-inline-block text-truncate">Gazelle Enterprises in Southern Jiangsu
-                        National Innovation Demonstration Zone</div>
+                {% for partner in partners %}
+                  <div class="swiper-slide">
+                    <img src="{{ partner.image.url }}" height="270" width="270" style="object-fit: contain;"/>
+                    <div class="title col-12 d-inline-block text-truncate">{{ partner.title }}</div>
                 </div>
-                <!-- /.swiper-slide -->
-
-                <div class="swiper-slide">
-                    <img src="https://placehold.co/400x300" width="270"/>
-                    <div class="title col-12 d-inline-block text-truncate">Jiangsu Science and Technology-based Small
-                        and Medium-sized Enterprises</div>
-                </div>
-                <!-- /.swiper-slide -->
-
-                <!-- <div
-                  class="swiper-slide"
-                  data-fancybox="gallery"
-                  data-caption="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
-                  data-src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
-              >
-                  <img
-                      src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
-                      alt="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
-                      title="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
-                  />
-                  <div class="title col-12 d-inline-block text-truncate">Jinji Lake Double Hundred Talent Program for Science and Technology Leaders</div>
-              </div> -->
-                <!-- /.swiper-slide -->
-
-                <div class="swiper-slide">
-                    <img src="https://placehold.co/400x300" width="270"/>
-                    <div class="title col-12 d-inline-block text-truncate">Listed nursery company in Suzhou Industrial
-                        Park</div>
-                </div>
-                <!-- /.swiper-slide -->
-
-
-                <div class="swiper-slide">
-                    <img src="https://placehold.co/400x300" width="270"/>
-                    <div class="title col-12 d-inline-block text-truncate">National High-tech Enterprise</div>
-                </div>
-                <!-- /.swiper-slide -->
+                {% endfor %}
             </div>
         </div>
     </div>

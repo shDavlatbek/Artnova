@@ -28,47 +28,29 @@
 }
 </style>
 
+<!-- <div class="gallery-item">
+  <div class="shop-one__item">
+    <div class="shop-one__image">
+
+        <a data-fancybox data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/I6YsP_9FMZ8/maxresdefault.jpg"
+            alt="Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" />
+        </a>
+        <a data-fancybox="gallery" data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="thm-btn shop-one__cart py-2">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
+        </a>
+    </div>
+</div> -->
+
 <section class="news-one">
   <div class="container-fluid">
     <div class="section-title text-center wow fadeInDown" data-wow-delay="200ms">
       <h2 class="section-title__title">Galereya</h2>
     </div>
     <div class="gallery col-12">
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/600x400"><img src="https://placehold.co/600x400" alt="Image"></a></div>
-        <div class="gallery-item">
-          <div class="shop-one__item">
-            <div class="shop-one__image">
-
-                <a data-fancybox data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/I6YsP_9FMZ8/maxresdefault.jpg"
-                    alt="Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" />
-                </a>
-                <a data-fancybox data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="thm-btn shop-one__cart py-2">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
-                </a>
-            </div>
-        </div>
-        </div>
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/500x700"><img src="https://placehold.co/500x700" alt="Image"></a></div>
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/800x300"><img src="https://placehold.co/800x300" alt="Image"></a></div>
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/600x300"><img src="https://placehold.co/600x300" alt="Image"></a></div>
-        <div class="gallery-item">
-          <div class="shop-one__item">
-            <div class="shop-one__image">
-
-                <a data-fancybox data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/I6YsP_9FMZ8/maxresdefault.jpg"
-                    alt="Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" />
-                </a>
-                <a data-fancybox data-caption="{% translate "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi" %}" href="https://www.youtube.com/embed/I6YsP_9FMZ8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="thm-btn shop-one__cart py-2">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
-                </a>
-            </div>
-        </div>
-        </div>
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/200x300"><img src="https://placehold.co/200x300" alt="Image"></a></div>
-        <div class="gallery-item"><a data-fancybox="gallery" href="https://placehold.co/400x300"><img src="https://placehold.co/400x300" alt="Image"></a></div>
-        
+        {% for gallery in galleries %}
+          <div class="gallery-item"><a data-fancybox="gallery" href="{{ gallery.image.url }}"><img src="{{ gallery.image.url }}" alt="Image"></a></div>
+        {% endfor %}
     </div>
   </div>
 </section>

@@ -8,7 +8,7 @@
           <span class="section-title__tagline">{% translate "Biz nima qilayotganimizni ko'ring" %}</span>
       </div>
       <div class="row">
-          {% for single in news %}
+          {% for single in news|slice:":4" %}
               {% include "components/news_single.html" with news=single %}
           {% endfor %}
       </div>

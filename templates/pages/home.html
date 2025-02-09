@@ -2,16 +2,18 @@
 {% load static %}
 {% load i18n %} 
 
-{% block title %}{% translate "Bosh sahifa" %} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
+{% block title %}{% translate "Bosh sahifa" %} || ARTNOVA{% endblock title %}
 
-{% block description %}{% translate "«VIGONVITA TOSHKENT» rasmiy web-sayti. Innovatsion, biofarmatsevtik kompaniya. Bizning preparatlarimiz: Onvita, Longvita" %}{% endblock description %}
+{% block description %}{% translate "«Artnova» tashkiloti rasmiy web-sahifasi. Xalqaro onlayn tanlovlar platformasi" %}{% endblock description %}
 
 {% block content %}
 
 {% include "sections/main-slider.html" %}
 {% include "sections/about.html" %}
 {% include "sections/team.html" %}
-{% include "sections/certificates-patents.html" %}
+{% if licenses or achievements %}
+    {% include "sections/certificates-patents.html" %}
+{% endif %}
 <!-- {% include "sections/medicine.html" %} -->
 {% include "sections/services.html" %}
 

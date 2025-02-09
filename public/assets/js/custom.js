@@ -20,7 +20,23 @@
             depth: 120,
             modifier: 1,
             slideShadows: false,
+        },
+        breakpoints: {
+            "0": {
+                spaceBetween: -100,
+                slidesPerView: 2
+            },
+            "575": {
+                spaceBetween: 30,
+                slidesPerView: 2
+            },
+
+            "1199": {
+                spaceBetween: 30,
+                slidesPerView: 3
+            }
         }
     });
-    
+
+
 })(jQuery);

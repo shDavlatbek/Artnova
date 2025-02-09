@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'web',
-    'django_ckeditor_5'
 ]
 
 MIDDLEWARE = [
@@ -160,97 +160,98 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
+    "site_title": "Artnova Admin",
+
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_header": "Artnova",
+    "welcome_sign": "Welcome to the Artnova",
+    "site_logo_classes": "   ",
+    # Copyright on the footer
+    "copyright": "Artnova",
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_brand": "Artnova",
+    "order_with_respect_to": [
+        "auth", "web", "web.sitesettings", 
+        "web.contactperson", "web.team", "web.licenseachievement", "web.service", "web.news",
+        "web.event", "web.eventimage", "web.gallery", "web.partner"
+    ],
+
+    # Logo to use for your site, must be present in static files, used for brand on top left
+    "site_logo": "/assets/images/logo-1.png",
     "language_chooser": True,
+    "changeform_format": "single",
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.Group": "fas fa-users",
+        "auth.user": "fas fa-user",
+        "web.sitesettings": "fas fa-cogs",
+        "web.contactperson": "fas fa-user",
+        "web.team": "fas fa-users",
+        "web.news": "fas fa-newspaper",
+        "web.licenseachievement": "fas fa-certificate",
+        "web.service": "fas fa-store",
+        "web.event": "fas fa-calendar-alt",
+        "web.eventimage": "fas fa-image",
+        "web.gallery": "fas fa-images",
+        "web.partner": "fas fa-users",
+    },
 }
 
-customColorPalette = [
-        {
-            'color': 'hsl(4, 90%, 58%)',
-            'label': 'Red'
-        },
-        {
-            'color': 'hsl(340, 82%, 52%)',
-            'label': 'Pink'
-        },
-        {
-            'color': 'hsl(291, 64%, 42%)',
-            'label': 'Purple'
-        },
-        {
-            'color': 'hsl(262, 52%, 47%)',
-            'label': 'Deep Purple'
-        },
-        {
-            'color': 'hsl(231, 48%, 48%)',
-            'label': 'Indigo'
-        },
-        {
-            'color': 'hsl(207, 90%, 54%)',
-            'label': 'Blue'
-        },
-    ]
 
-CKEDITOR_5_CONFIGS = {
-    'default': {
-        'toolbar': ['heading', '|', 'bold', 'italic', 'link',
-                    'bulletedList', 'numberedList', 'blockQuote', 'imageUpload', ],
 
-    },
-    'extends': {
-        'blockToolbar': [
-            'paragraph', 'heading1', 'heading2', 'heading3',
-            '|',
-            'bulletedList', 'numberedList',
-            '|',
-            'blockQuote',
-        ],
-        'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-        'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
-                    'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
-                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
-                    'insertTable',],
-        'image': {
-            'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
-                        'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side',  '|'],
-            'styles': [
-                'full',
-                'side',
-                'alignLeft',
-                'alignRight',
-                'alignCenter',
-            ]
 
-        },
-        'table': {
-            'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
-            'tableProperties', 'tableCellProperties' ],
-            'tableProperties': {
-                'borderColors': customColorPalette,
-                'backgroundColors': customColorPalette
-            },
-            'tableCellProperties': {
-                'borderColors': customColorPalette,
-                'backgroundColors': customColorPalette
-            }
-        },
-        'heading' : {
-            'options': [
-                { 'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph' },
-                { 'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1' },
-                { 'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2' },
-                { 'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3' }
-            ]
+
+
+
+TINYMCE_JS_URL = "assets/libs/tinymce/tinymce.min.js"
+
+TINYMCE_DEFAULT_CONFIG = {
+    "theme": "silver",
+    "height": "500px",
+    "branding": False,
+    "width": "110%",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
+    "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
+    "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
+    "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
+    "a11ycheck ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 100,
+    "language": "uz_UZ",  # To force a specific language instead of the Django current language.
+    "image_title": "true",
+    "automatic_uploads": "true",
+    "file_picker_types": "image",
+    "file_picker_callback": """
+        function(cb, value, meta) {
+            const input = document.createElement('input');
+            input.setAttribute('type', 'file');
+            input.setAttribute('accept', 'image/*');
+
+            input.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+
+            const reader = new FileReader();
+            reader.addEventListener('load', () => {
+                /*
+                Note: Now we need to register the blob in TinyMCEs image blob
+                registry. In the next release this part hopefully won't be
+                necessary, as we are looking to handle it internally.
+                */
+                const id = 'blobid' + (new Date()).getTime();
+                const blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                const base64 = reader.result.split(',')[1];
+                const blobInfo = blobCache.create(id, file, base64);
+                blobCache.add(blobInfo);
+
+                /* call the callback and populate the Title field with the file name */
+                cb(blobInfo.blobUri(), { title: file.name });
+            });
+            reader.readAsDataURL(file);
+            });
+
+            input.click();
         }
-    },
-    'list': {
-        'properties': {
-            'styles': 'true',
-            'startIndex': 'true',
-            'reversed': 'true',
-        }
-    }
+    """
 }
-
-CKEDITOR_5_ALLOW_ALL_FILE_TYPES = True
-
-CKEDITOR_5_FILE_UPLOAD_PERMISSION = "authenticated"  # Possible values: "staff", "authenticated", "any"

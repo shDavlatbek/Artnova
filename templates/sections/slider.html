@@ -9,35 +9,14 @@
         <div class="col-12 col-lg-8 py-5">
           <div class="swiper overflow-hidden py-5 " id="swiper-photos">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img class="img-fluid rounded shadow" src="https://picsum.photos/370/500" alt="">
-              </div>
+              {% for event_image in event_images %}
+                <div class="swiper-slide">
+                  <img class="img-fluid rounded shadow" src="{{ event_image.image.url }}" alt="">
+                </div>
+              {% endfor %}
             </div>
             <div class="swiper-pagination"></div>
+
           </div>
         </div>
         <div class="col-12 col-lg-4 d-flex align-items-center">

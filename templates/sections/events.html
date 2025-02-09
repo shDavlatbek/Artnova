@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% load custom_tags %}
 
 <section class="events-one">
   <div class="container">
@@ -9,59 +10,30 @@
     </div>
     
     <div class="row">
+      {% for event in events|slice:":4" %}
       <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
-          <!--Services One Single-->
-          <div class="services-one__single">
-              <div class="services-one__img">
-                  <img src="https://picsum.photos/570/300" alt="" />
-              </div>
-              <div class="services-one__content">
-                  <h3 class="services-one__title"><a href="javascript:void(0)">Lorem ipsum dolor sit.</a></h3>
-                  <p class="services-one__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, quia?</p>
-                  <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
-              </div>
-          </div>
-      </div>
-      <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
-          <!--Services One Single-->
-          <div class="services-one__single">
-              <div class="services-one__img">
-                  <img src="https://picsum.photos/570/400" alt="" />
-              </div>
-              <div class="services-one__content">
-                  <h3 class="services-one__title"><a href="javascript:void(0)">Lorem ipsum dolor sit.</a></h3>
-                  <p class="services-one__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, quia?</p>
-                  <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
-              </div>
-          </div>
-      </div>
-    
-      <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
-          <!--Services One Single-->
-          <div class="services-one__single">
-              <div class="services-one__img">
-                  <img src="https://picsum.photos/570/300" alt="" />
-              </div>
-              <div class="services-one__content">
-                  <h3 class="services-one__title"><a href="javascript:void(0)">Lorem ipsum dolor sit.</a></h3>
-                  <p class="services-one__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, quia?</p>
-                  <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
-              </div>
-          </div>
-      </div>
-      <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
-          <!--Services One Single-->
-          <div class="services-one__single">
-              <div class="services-one__img">
-                  <img src="https://picsum.photos/570/400" alt="" />
-              </div>
-              <div class="services-one__content">
-                  <h3 class="services-one__title"><a href="javascript:void(0)">Lorem ipsum dolor sit.</a></h3>
-                  <p class="services-one__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, quia?</p>
-                  <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
-              </div>
-          </div>
-      </div>
+        <!--Services One Single-->
+        <div class="services-one__single">
+            <div class="services-one__img">
+                <img src="{{ event.image.url }}" alt="{{ event.title }}" />
+            </div>
+            <div class="services-one__content">
+                <h3 class="services-one__title"><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+
+                <p class="services-one__text">{{ event.content|striptags|short_description:100 }}</p>
+                <a href="{{ event.get_absolute_url }}" class="services-one__btn">{% translate "Batafsil" %}</a>
+            </div>
+        </div>
+
+    </div>
+      {% endfor %}
     </div>
   </div>
+  {% if events|length > 4 %}
+    <div class="w-100 text-center mt-5 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <a href="{% url 'events-all' %}" class="thm-btn mx-auto">
+              {% translate "Barchasi" %}
+          </a>
+    </div>
+    {% endif %}
 </section>
